@@ -56,6 +56,13 @@ https://github.com/steven6120/Face-recognition-CRM/blob/a4085be2c6336e069d1eebeb
 <img width="1280" alt="鎴湒 2020-06-13 涓嬪崍8 55 06" src="https://user-images.githubusercontent.com/67748642/131555426-93b6228c-b100-4bf4-af51-379b93f2ccc1.png">
 
 
-## 程式圖片
+## 開發圖片
+
+### 程式雛型畫面
+<img width="1279" alt="鎴湒 2020-05-26 涓嬪崍5 57 54" src="https://user-images.githubusercontent.com/67748642/131556161-e0a9b48f-c15f-45db-b817-ae45bb2e9ad9.png">
+
+### 程式設計最佳化畫面
+![image](https://user-images.githubusercontent.com/67748642/131556693-6c2d1cd6-a1e5-4664-b0cf-0678f76df9c7.png)
+
 
 
