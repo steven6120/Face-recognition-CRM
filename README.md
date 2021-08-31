@@ -24,7 +24,25 @@
 
 當系統辨識到人臉，就會去取得後端資料進行對比，判別該名使用者是否為新的使用者或已經註冊的會員。
 https://github.com/steven6120/Face-recognition-CRM/blob/ea077be6852723bfdbb17aaa9b67102b1406afa3/webcam20200530.py#L83-L101
-![image](https://user-images.githubusercontent.com/67748642/131553213-1427ac1c-38d4-44de-a433-e6f3e1d73484.png)
+```
+ if (face_distances > 0.5): #不同人的時候
+            allfacedata = gets.Getface_Code()
+            data = gets.Facecode_List()
+            image_encoding_numpys = np.asarray(image_encodings)
+            for i in range(len(data)):
+                datanumpy = np.asarray(data[i])
+                face_konwdistances = face_recognition.face_distance(datanumpy,image_encoding_numpys)
+                if (face_konwdistances < 0.5): #同一人的時候
+                    member,commodstr,time,total,favorite = output.get_data(allfacedata[i])
+                    break
+                elif (i == len(data) - 1):
+                    member,commodstr = uploadfacecode.upload_new_facecode(image_encoding_numpys)
+                    print ("New Face")
+
+            frame = outputvideo((),frame, facelocation, member, time, commodstr, total, favorite)
+            image_to_test_encoding = image_encoding_numpys
+
+```
 
 
 假如是新的客戶，系統會產生唯一碼作為使用者ID，顯示在畫面上。在系統的設計中，此時店員會與客戶說，只需要電話號碼就可以加入會員，詢問有沒有興趣，如客戶有興趣，在取得電話號碼和在CRM上輸入後，客戶可以在手機上收到店舖的註冊會員信息，填寫名字和生日資料來加入會員。
