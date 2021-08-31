@@ -23,12 +23,15 @@
 <img width="600" alt="鎴湒 2020-06-10 涓嬪崍4 42 39" src="https://user-images.githubusercontent.com/67748642/131550009-edb80f82-50b5-459b-bcab-4bb469c09247.png">
 
 當系統辨識到人臉，就會去取得後端資料進行對比，判別該名使用者是否為新的使用者或已經註冊的會員。
-![image](https://user-images.githubusercontent.com/67748642/131551819-4c7f263a-cca1-4661-80e6-18adb460ca9e.png)
+![image](https://user-images.githubusercontent.com/67748642/131553213-1427ac1c-38d4-44de-a433-e6f3e1d73484.png)
+
 
 假如是新的客戶，系統會產生唯一碼作為使用者ID，顯示在畫面上。在系統的設計中，此時店員會與客戶說，只需要電話號碼就可以加入會員，詢問有沒有興趣，如客戶有興趣，在取得電話號碼和在CRM上輸入後，客戶可以在手機上收到店舖的註冊會員信息，填寫名字和生日資料來加入會員。
+<img width="600" alt="鎴湒 2020-06-11 涓嬪崍5 50 52" src="https://user-images.githubusercontent.com/67748642/131553269-711f2aa0-68a2-4a7c-ae93-1dcfa5fa733e.png">
+
 
 假如是舊的用戶，系統的畫面上會顯示該名客戶在註冊時的姓名，或沒註冊時會顯示唯一碼。同時會顯示上一次的購物紀錄，並且顯示客戶可能會有興趣的商品。
-
+![image](https://user-images.githubusercontent.com/67748642/131551819-4c7f263a-cca1-4661-80e6-18adb460ca9e.png)
 ## 程式圖片
 
 
