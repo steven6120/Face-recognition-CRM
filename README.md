@@ -23,6 +23,7 @@
 <img width="600" alt="鎴湒 2020-06-10 涓嬪崍4 42 39" src="https://user-images.githubusercontent.com/67748642/131550009-edb80f82-50b5-459b-bcab-4bb469c09247.png">
 
 當系統辨識到人臉，就會去取得後端資料進行對比，判別該名使用者是否為新的使用者或已經註冊的會員。
+https://github.com/steven6120/Face-recognition-CRM/blob/ea077be6852723bfdbb17aaa9b67102b1406afa3/webcam20200530.py#L83-L101
 ![image](https://user-images.githubusercontent.com/67748642/131553213-1427ac1c-38d4-44de-a433-e6f3e1d73484.png)
 
 
