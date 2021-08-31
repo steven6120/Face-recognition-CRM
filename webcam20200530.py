@@ -80,17 +80,17 @@ while True:
         image_encodings = face_recognition.face_encodings(photocuts)
         face_distances = face_recognition.face_distance(image_encodings, image_to_test_encoding) #  辨識即時人臉是否同一個人，如果是的話不會往下執行
    
-        if (face_distances > 0.5): #不同人的時候
+        if (face_distances > 0.5): #有人臉的時候
             allfacedata = gets.Getface_Code()
-            data = gets.Facecode_List()
+            data = gets.Facecode_List() #取得資料庫人臉特徵碼
             image_encoding_numpys = np.asarray(image_encodings)
             for i in range(len(data)):
                 datanumpy = np.asarray(data[i])
-                face_konwdistances = face_recognition.face_distance(datanumpy,image_encoding_numpys)
-                if (face_konwdistances < 0.5): #同一人的時候
+                face_konwdistances = face_recognition.face_distance(datanumpy,image_encoding_numpys) #開始對比人臉
+                if (face_konwdistances < 0.5): #與資料庫有相符的人臉時候
                     member,commodstr,time,total,favorite = output.get_data(allfacedata[i])
                     break
-                elif (i == len(data) - 1):
+                elif (i == len(data) - 1): #沒有相符的人臉時候
                     member,commodstr = uploadfacecode.upload_new_facecode(image_encoding_numpys)
                     print ("New Face")
 
