@@ -25,17 +25,17 @@
 當系統辨識到人臉，就會去取得後端資料進行對比，判別該名使用者是否為新的使用者或已經註冊的會員。
 https://github.com/steven6120/Face-recognition-CRM/blob/ea077be6852723bfdbb17aaa9b67102b1406afa3/webcam20200530.py#L83-L101
 ```
- if (face_distances > 0.5): #不同人的時候
+ if (face_distances > 0.5): #有人臉的時候
             allfacedata = gets.Getface_Code()
-            data = gets.Facecode_List()
+            data = gets.Facecode_List() #取得資料庫人臉特徵碼
             image_encoding_numpys = np.asarray(image_encodings)
             for i in range(len(data)):
                 datanumpy = np.asarray(data[i])
-                face_konwdistances = face_recognition.face_distance(datanumpy,image_encoding_numpys)
-                if (face_konwdistances < 0.5): #同一人的時候
+                face_konwdistances = face_recognition.face_distance(datanumpy,image_encoding_numpys) #開始對比人臉
+                if (face_konwdistances < 0.5): #與資料庫有相符的人臉時候
                     member,commodstr,time,total,favorite = output.get_data(allfacedata[i])
                     break
-                elif (i == len(data) - 1):
+                elif (i == len(data) - 1): #沒有相符的人臉時候
                     member,commodstr = uploadfacecode.upload_new_facecode(image_encoding_numpys)
                     print ("New Face")
 
